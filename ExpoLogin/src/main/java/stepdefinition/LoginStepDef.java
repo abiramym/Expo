@@ -42,6 +42,8 @@ public class LoginStepDef {
 	    if (element.isDisplayed()){
 	    	System.out.println("Object Found");
 	    	
+	    }else {
+	    	System.out.println("Object not found");
 	    }
 	    
 	    
