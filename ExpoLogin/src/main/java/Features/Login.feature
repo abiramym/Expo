@@ -16,20 +16,81 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
+
 Feature: Login Functionality and validate Home page of expo.io
 
+ ### scenario outline and datatable
   @tag1
-  Scenario: Expo Login Test scenario
+  Scenario Outline: Expo Login Test scenario
   
     Given User in the login Page
+     
+   	When Enter the "<username>" and "<password>"
     
-    When Enter the username and password
+ 	  Then Click on login button
+    
+    Then Enter the home page and validate
+   
+      Examples: 
+ 					 | username | password |
+ 					 | abiramy89| abi@1234 |
+ 					 | srinu89  | sri@1234 |  
+   
+    ### pass values directly      
+  @tag2
+	Scenario: Expo Login Test Scenario
+	
+		Given	User in the login Page
+	
+	 When Enter the "srinu89" and "sri@1234"
     
     Then Click on login button
     
     And Enter the home page and validate
-        
+    
+     #### Paramtrisation pass test data via datatable    
+    @tag3
+  Scenario: Expo Login Test scenario
   
-
+    Given User in the login Page
+     
+   	When Enter the credentials to login
+  			|abiramy89|abi@1234|
+    
+ 	  Then Click on login button
+    
+    Then Enter the home page and validate
  
+ ### hard code the values in the script - not recommended
+ @tag4 
+	Scenario: Expo Login Test Scenario
+	
+		Given	User in the login Page
+	
+	 	When Enter the username and password
+     
+    Then Click on login button
+    
+    And Enter the home page and validate
+    
+    
+    ### Data driven - using Map Tables
+    
+    @tag5
+    Scenario: Expo Login Test Scenario
+	
+		  Given User in the login Page
+	
+	 	When Enter the Credentials to login
+	 	|username|password|
+	 	|abiramy89|abi@1234|
+	 	|srinu89|sri@1234|
+     
+    Then Click on login button
+    
+    And Enter the home page and validate
+  
+    
+  
+ 
+   
