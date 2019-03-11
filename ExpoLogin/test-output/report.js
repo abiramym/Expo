@@ -80,91 +80,229 @@ formatter.feature({
   "id": "login-functionality-and-validate-home-page-of-expo.io",
   "keyword": "Feature"
 });
-formatter.scenario({
+formatter.scenarioOutline({
   "comments": [
     {
-      "line": 77,
-      "value": "### Data driven - using Map Tables"
+      "line": 22,
+      "value": "### scenario outline and datatable"
     }
   ],
-  "line": 80,
-  "name": "Expo Login Test Scenario",
+  "line": 24,
+  "name": "Expo Login Test scenario",
   "description": "",
   "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario",
-  "type": "scenario",
-  "keyword": "Scenario",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 79,
-      "name": "@tag5"
+      "line": 23,
+      "name": "@tag1"
     }
   ]
 });
 formatter.step({
-  "line": 82,
+  "line": 26,
   "name": "User in the login Page",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 84,
-  "name": "Enter the Credentials to login",
+  "line": 28,
+  "name": "Enter the \"\u003cusername\u003e\" and \"\u003cpassword\u003e\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 30,
+  "name": "Click on login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 32,
+  "name": "Enter the home page and validate",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 34,
+  "name": "",
+  "description": "",
+  "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario;",
   "rows": [
     {
       "cells": [
         "username",
         "password"
       ],
-      "line": 85
+      "line": 35,
+      "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario;;1"
     },
     {
       "cells": [
-        "abiramy89",
+        "abiramy8",
         "abi@1234"
       ],
-      "line": 86
+      "line": 36,
+      "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario;;2"
     },
     {
       "cells": [
         "srinu89",
         "sri@1234"
       ],
-      "line": 87
+      "line": 37,
+      "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario;;3"
     }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 36,
+  "name": "Expo Login Test scenario",
+  "description": "",
+  "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 23,
+      "name": "@tag1"
+    }
+  ]
+});
+formatter.step({
+  "line": 26,
+  "name": "User in the login Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 28,
+  "name": "Enter the \"abiramy8\" and \"abi@1234\"",
+  "matchedColumns": [
+    0,
+    1
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 89,
+  "line": 30,
   "name": "Click on login button",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 91,
+  "line": 32,
   "name": "Enter the home page and validate",
-  "keyword": "And "
+  "keyword": "Then "
 });
 formatter.match({
   "location": "LoginStepDef.user_in_the_login_Page()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 5830687048,
+  "status": "passed"
 });
 formatter.match({
-  "location": "LoginStepDef.enter_the_Credentials_to_login(Credentials\u003e)"
+  "arguments": [
+    {
+      "val": "abiramy8",
+      "offset": 11
+    },
+    {
+      "val": "abi@1234",
+      "offset": 26
+    }
+  ],
+  "location": "LoginStepDef.enter_the_username_and_password(String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 330448114,
+  "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDef.click_on_login_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 246655213,
+  "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDef.enter_the_home_page_and_validate()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 308772848,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 37,
+  "name": "Expo Login Test scenario",
+  "description": "",
+  "id": "login-functionality-and-validate-home-page-of-expo.io;expo-login-test-scenario;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 23,
+      "name": "@tag1"
+    }
+  ]
+});
+formatter.step({
+  "line": 26,
+  "name": "User in the login Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 28,
+  "name": "Enter the \"srinu89\" and \"sri@1234\"",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 30,
+  "name": "Click on login button",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 32,
+  "name": "Enter the home page and validate",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LoginStepDef.user_in_the_login_Page()"
+});
+formatter.result({
+  "duration": 4503589125,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "srinu89",
+      "offset": 11
+    },
+    {
+      "val": "sri@1234",
+      "offset": 25
+    }
+  ],
+  "location": "LoginStepDef.enter_the_username_and_password(String,String)"
+});
+formatter.result({
+  "duration": 333545150,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDef.click_on_login_button()"
+});
+formatter.result({
+  "duration": 214193229,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LoginStepDef.enter_the_home_page_and_validate()"
+});
+formatter.result({
+  "duration": 233284599,
+  "status": "passed"
 });
 });

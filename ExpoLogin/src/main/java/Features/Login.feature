@@ -33,7 +33,7 @@ Feature: Login Functionality and validate Home page of expo.io
    
       Examples: 
  					 | username | password |
- 					 | abiramy89| abi@1234 |
+ 					 | abiramy8| abi@1234 |
  					 | srinu89  | sri@1234 |  
    
     ### pass values directly      
@@ -56,6 +56,7 @@ Feature: Login Functionality and validate Home page of expo.io
      
    	When Enter the credentials to login
   			|abiramy89|abi@1234|
+  			|srinu89|sri@1234|
     
  	  Then Click on login button
     
@@ -89,6 +90,22 @@ Feature: Login Functionality and validate Home page of expo.io
     Then Click on login button
     
     And Enter the home page and validate
+    
+    @tag6
+    Scenario: Expo Login Test Scenario
+	
+		  Given User in the login Page
+	
+	 	When Enter the Credentials to login
+	 	|username|password|
+	 	|abiramy89|abi@1234|
+	 	|srinu89|sri@1234|
+     
+    Then Click on login button
+    
+    And Enter the home page and validate the user
+    |abiramy89|
+    |srinu89|
   
     
   
